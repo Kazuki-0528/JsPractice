@@ -1,8 +1,13 @@
 "use strict";
 
-let hp = -50;
+{
+  const otherScores = [10, 20];
+  const scores = [80, 90, 40, 80, ...otherScores];
+  console.log(scores);
 
-do {
-  console.log(`${hp} HP left!`);
-  hp -= 15;
-} while (hp > 0);
+  function sum(a, b) {
+    console.log(a + b);
+  }
+
+  sum(...otherScores);
+}
