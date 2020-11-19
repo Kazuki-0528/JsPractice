@@ -1,13 +1,14 @@
 "use strict";
 
 {
-  const otherScores = [10, 20];
-  const scores = [80, 90, 40, 80, ...otherScores];
-  console.log(scores);
+  const prices = [80, 90, 40];
 
-  function sum(a, b) {
-    console.log(a + b);
-  }
+  const updatePrices = prices.map((price) => {
+    return price + 20;
+  })
 
-  sum(...otherScores);
+  // const prices = [80, 90, 40];
+
+  // const updatePrices = prices.map(price =>  price + 20);
+  console.log(updatePrices);
 }
