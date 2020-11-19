@@ -1,8 +1,15 @@
 "use strict";
 
 {
-  const d = new Date();
-  // console.log(d);
+  let i = 0;
+  function showTime() {
+    console.log(new Date());
+    const timeoutId = setTimeout(showTime, 1000);
+    i++;
+    if (i > 2) {
+      clearTimeout(timeoutId);
+    }
+  }
 
-  console.log(`${d.getMonth() + 1} 月 ${d.getDate()} 日`)
+  showTime();
 }
