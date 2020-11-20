@@ -8,14 +8,32 @@
     }
 
     show() {
-      console.log(`${this.text} - ${this.likeCount}いいね`);
+      console.log(`${this.text} - ${this.likeCount} likes`);
+    }
+
+    like() {
+      this.likeCount++;
+      this.show();
+    }
+  }
+
+  class SponsoredPost extends Post {
+    constructor(text, sponsor) {
+      super(text);
+      this.sponsor = sponsor;
+    }
+
+    show() {
+      super.show()
+      console.log(`... sponsored by ${this.sponsor}`);
     }
   }
 
   const posts = [
     new Post('JavaScript勉強中'),
     new Post('English'),
+    new SponsoredPost('3分でマスター', 'install'),
   ];
-  posts[0].show();
-  posts[1].show();
+
+  posts[2].show();
 }
