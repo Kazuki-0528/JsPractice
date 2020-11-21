@@ -1,9 +1,11 @@
 "use strict";
 
 {
-  function update() {
-    document.getElementById('target').textContent = 'Changed!!!!!!';
-  }
+  document.querySelector('button').addEventListener('dblclick', () => {
+    console.log('Double Clicked!!!!!');
+  });
 
-  setTimeout(update, 1000);
+  document.addEventListener('mousemove', () => {
+    console.log('moved!!!!!!!');
+  });
 }
